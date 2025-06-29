@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Numbers in an Array</title>
+</head>
+<body>
+    <h2>Sort Numbers</h2>
+    <button onclick="sortNumbers()">Sort Numbers</button>
+
+    <script>
+        function sortNumbers() {
+          
+            let numbers = [45, 12, 78, 4, 29, 16, 33, 10, 50, 5];
+
+           
+            alert("Original Array: " + numbers);
+
+          
+            for (let i = 0; i < numbers.length; i++) {
+                for (let j = i + 1; j < numbers.length; j++) {
+                    if (numbers[i] > numbers[j]) {
+                      
+                        let temp = numbers[i];
+                        numbers[i] = numbers[j];
+                        numbers[j] = temp;
+                    }
+                }
+            }
+
+           
+            alert("Sorted Array: " + numbers);
+        }
+    </script>
+</body>
+</html>
