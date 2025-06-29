@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiples of 5</title>
+</head>
+<body>
+    <p id="result">Multiples of 5 from 30 to 100 are: </p> <!-- Initial message in the paragraph -->
+    
+    <script>
+        var a = 30;
+
+        while (a <= 100) {
+            if (a % 5 != 0) {
+                a++;
+                continue; // Skip to the next iteration if not a multiple of 5
+            }
+            // Append the current multiple of 5 to the result element
+            document.getElementById("result").innerHTML += a +" ";
+            a++;
+        }
+
+      
+    </script>
+</body>
+</html>
+
+
+
+<!-- //same with
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiples of 5</title>
+</head>
+<body>
+    <p id="result">Multiples of 5 from 30 to 100 are: </p> 
+    
+<!--     <script>
+        for (var a = 30; a <= 100; a++) { // Increment `a` in the for loop
+            if (a % 5 != 0) {
+                continue; // Skip to the next iteration if not a multiple of 5
+            }
+            // Append the current multiple of 5 to the result element
+            document.getElementById("result").innerHTML += a + " ";
+        }
+    </script>
+</body>
+</html> -->
+
