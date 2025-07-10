@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Allocation</title>
+</head>
+<body>
+    <h2>House Allocation Based on Monthly Rent</h2>
+    <button onclick="determineHouseType()">Enter Monthly Rent</button>
+
+    <script>
+        function determineHouseType() {
+           
+            var rent = prompt("Enter your monthly rent:");
+            var houseType;
+
+          
+            rent = Number(rent);
+
+            
+            if (rent > 5000 && rent <=10000) {
+                houseType = "One-bedroom house";
+            } else if (rent > 10000 && rent < 15000) {
+                houseType = "Two-bedroom house";
+            } else if (rent > 15000 && rent < 20000) {
+                houseType = "Three-bedroom house";
+            } else {
+                houseType = "No allocation for that amount";
+            }
+
+        
+            document.write("Type of house: " + houseType);
+        }
+    </script>
+</body>
+</html>
+
