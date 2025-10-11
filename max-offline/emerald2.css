@@ -1,0 +1,259 @@
+.edit-form1 {
+  width: 250px;
+  height:60%;
+  padding: 80px;
+  background-color: snow;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 3%;
+  left: 65%;
+  z-index: 2;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  
+}
+
+
+
+
+
+
+
+#password
+{
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid green;
+  padding: 5px;
+  font-size: 16px;
+  outline:none;
+  position: absolute;
+  top:65%;
+  left: 10%;
+  background: transparent;
+
+}
+#username
+{
+  border:none;
+  background: transparent;
+  border-bottom: 1px solid green;
+  width:80%;
+  padding:5px;
+  outline:none;
+  position: absolute;
+  top:50%;
+  left: 10%;
+  font-size: 16px;
+}
+
+#submit,#register
+{
+  border: 1px solid #064e3b;
+  padding: 10px;
+  border-radius:14px;
+   top:85%;
+   left:10%;
+   position: absolute;
+   width: 83%;
+   background: transparent;
+
+} 
+  #register:hover{
+    background-color: #10b981;
+    transition: background-color 0.5s ease;
+  }
+
+  #submit:hover{
+    background-color:#10b981;
+    transition: background-color 0.5s ease;
+  }
+
+
+.label1{
+  position: absolute;
+  top:45%;
+  left:10%;
+
+}
+.label2{
+  position: absolute;
+  top:60%;
+  left: 10%;
+
+}
+.img3{
+ max-width: 45%; 
+ position: absolute;
+ top:-2%;
+ left:33%;
+  
+}
+.user-login{
+  position: absolute;
+  top:30%;
+  left:38%;
+}
+
+
+
+.left {
+  height: 100%; 
+  top:0;
+  position: absolute;
+  width: 82%;
+    left: 0;
+    background-color: #064e3b; 
+    z-index: -1; 
+}
+
+.right {
+  height: 100%; 
+  top:0;
+  position: absolute;
+  width: 18%;
+    right: 0;
+    background-color: white;
+    z-index: -1; 
+}
+.edit-form2 {
+ 
+  
+  
+  width:1050px;
+  height: 60%;
+  position: absolute;
+  left: 1%;
+  top:1%;
+  background-image: url('you3.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding:100px;
+}
+.img4{
+  max-width: 53%;
+  position: absolute;
+  left: 13%;
+  top:2%;
+  z-index: 2;
+}
+
+.icon7{
+  width: 105%;
+  
+   position: absolute;
+  left: 0%;
+  top:-9%;
+  z-index:1;
+}
+.logo1{
+  z-index: 3;
+  position: absolute;
+  left: 1%;
+  top:-5%;
+  width: 15%;
+
+}
+
+
+#switch-to-register,#switch-to-login{
+  position: absolute;
+  left: 25%;
+  top:92%;
+
+}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+.img3{
+ max-width: 45%; 
+ position: absolute;
+ top:-2%;
+ left:33%;
+  
+}
+
+.user-registration{
+ position: absolute;
+  top:30%;
+  left:30%;
+
+}
+
+
+.labelA{
+  position: absolute;
+  left:10%;
+  top:43%;
+}
+
+.labelB{
+  position: absolute;
+  left:10%;
+  top:53%;
+}
+
+.labelC{
+  position: absolute;
+  left:10%;
+  top:63%;
+}
+
+.labelD{
+  position: absolute;
+  left:10%;
+  top:73%;
+}
+
+#reg-email{
+  position: absolute;
+  left:10%;
+  top:47%;
+}
+
+#reg-username{
+  position: absolute;
+  left:10%;
+  top:57%;  
+}
+
+#reg-password{
+  position: absolute;
+  left:10%;
+  top:67%;  
+}
+
+#reg-confirm-password{
+  position: absolute;
+  left:10%;
+  top:77%; 
+}
+
+
+.regInput
+{
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid green;
+  padding: 5px;
+  font-size: 16px;
+  outline:none;
+  background: transparent;
+
+}
+#spinner,#spinner1{
+   position: absolute;
+   top:85%; 
+   left:25%;
+   font-size: 20px;
+   font-family:verdana,sans-serif;
+}
+
+
+
+
+
+

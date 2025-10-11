@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Monkey bay 🙊</title>
+  <link rel="stylesheet" href="emerald2.css">
+</head>
+<body style="overflow: hidden;">
+  
+  <form class="edit-form2">
+    <img class="img4" src="img4.png">
+    <img class="logo1" src="logo1.png">
+  </form>
+
+  <!-- Login Form -->
+  <form id="login-form" action="login.php" method="post" class="edit-form1">
+    <img class="img3" src="img3.png">
+    <p style="font-size: 21px; color: black; font-family: verdana, sans-serif;" class="user-login">User Login</p>
+    <label style="font-size: 14px; font-family: verdana, sans-serif;" class="label1" for="username">Username</label>
+    <input type="text" id="username" name="username" required><br> <!-- Changed 'name' to 'username' -->
+    <label style="font-size: 14px; font-family: verdana, sans-serif;" class="label2" for="password">Password</label>
+    <input type="password" id="password" name="password" required><br>
+    
+    <input style="position: absolute; top: 77%; left: 9%;" type="checkbox" id="remember-me" name="remember-me">
+    <label style="font-size: 14px; position: absolute; top: 77%; left: 14%; font-family: verdana, sans-serif;" for="remember-me">Remember me</label><br>
+   
+    <a style="background: transparent; font-size: 14px; position: absolute; top: 77%; left: 60%; font-family: verdana, sans-serif; color: #10b981;" href="#" class="forgot-password">Forgot password?</a><br>
+    
+    <button type="submit" id="submit">Login</button><span id="spinner" style="display: none;">🐵Logging in...🔃</span>
+    <p style="font-size: 14px; font-family: verdana, sans-serif;" id="switch-to-register"><span>Don't have an account? </span><span><a style="color: #10b981;" class="greenReg" href="#">Register</a></span></p>
+  </form>
+
+  <!-- Registration Form (initially hidden) -->
+  <form method="post" action="registration.php" id="register-form" class="edit-form1" style="display: none;">
+    <img class="img3" src="img3.png">
+    <p style="font-size: 21px; color: black; font-family: verdana, sans-serif;" class="user-registration">User Registration</p>
+
+    <label style="font-size: 14px; font-family: verdana, sans-serif;" class="labelA" for="reg-email">Email</label>
+    <input class="regInput" type="email" id="reg-email" name="email" placeholder="name@monkeybay.com" required><br>
+
+    <label style="font-size: 14px; font-family: verdana, sans-serif;" class="labelB" for="reg-username">Username</label>
+    <input class="regInput" type="text" id="reg-username" name="username" placeholder="No spaces allowed" required><br>
+
+    <label style="font-size: 14px; font-family: verdana, sans-serif;" class="labelC" for="reg-password">Password</label>
+    <input class="regInput" type="password" id="reg-password" name="password" required><br>
+
+    <label style="font-size: 14px; font-family: verdana, sans-serif;" class="labelD" for="reg-confirm-password">Confirm Password</label>
+    <input class="regInput" type="password" id="reg-confirm-password" name="confirm_password" required><br>
+
+    <button type="submit" id="register">Register</button><span id="spinner1" style="display: none;">🐵Registering user...🔃</span>
+    <p style="font-size: 14px; font-family: verdana, sans-serif;" id="switch-to-login"><span>Already have an account? </span><span><a style="color: #10b981;" class="greenReg" href="#">Login</a></span></p>
+  </form>
+
+  <script>
+    document.getElementById("switch-to-register").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("login-form").style.display = "none";
+      document.getElementById("register-form").style.display = "block";
+    });
+
+    document.getElementById("switch-to-login").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("register-form").style.display = "none";
+      document.getElementById("login-form").style.display = "block";
+    });
+  </script>
+</body>
+</html>
+
+
+
+
