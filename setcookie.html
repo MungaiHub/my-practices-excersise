@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    function setcookie(name, value, daystolive){
+        const date = new Date();
+        date.setTime(date.getTime()+(daystolive*24*60*60*1000));
+        let expires = "expires="+date.toUTCString();
+        document.cookie=`${name}=${value}; ${expires};path=/`;
+    }
+    setcookie("firstname","amos",45);
+    document.write(document.cookie);
+    function deletecookie(name){
+            setcookie(name,null,null);
+        }
+        deletecookie(firstname);
+  </script>  
+</body>
+</html>
