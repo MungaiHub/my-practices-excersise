@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>enter a number you want to know its factorial</p> 
+   number: <input type="text" id="numtextbox"> <br>
+   <input type="submit" id="submitbtn">
+   <p id="factorial"></p>
+
+<script>
+    document.getElementById("submitbtn").onclick=calculate;
+
+    function calculate(){
+        let factorial=1;
+        let num=document.getElementById("numtextbox").value;
+        num=Number(num);
+        let tempnum=num;
+        while(tempnum>1){
+            factorial=factorial*tempnum;
+            tempnum--;
+        }
+        document.getElementById("factorial").innerHTML+="the factorial of "+num +" is: " +factorial;
+
+    }
+</script>
+</body>
+</html>

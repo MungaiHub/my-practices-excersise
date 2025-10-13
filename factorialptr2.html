@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=window.prompt("enter a number you want to know its factorial");
+        let factorial=1;
+        num=Number(num);
+        let tempnum=num;
+        while (tempnum>1){
+            factorial=factorial*tempnum;
+            tempnum--;
+        }
+        document.write("the factorial of " + num + " is: " +factorial);
+       
+    </script>
+</body>
+</html>
