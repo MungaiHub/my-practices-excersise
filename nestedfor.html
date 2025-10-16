@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label id="myRectangle"></label>
+   <script>
+    let rows = window.prompt("enter no. of rows");
+  
+    for (let i = 1; i<=rows;i++){
+        for(let j=1;j<=i;j++){
+            document.getElementById("myRectangle").innerHTML+="*";
+
+        }
+        document.getElementById("myRectangle").innerHTML+="<br>";
+    }
+   </script> 
+</body>
+</html>
+
+
+<!-- //another to write the same code using console.log -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let rows = window.prompt("Enter number of rows");
+        
+        for (let i = 1; i <= rows; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += "*"; // Build each row of stars
+            }
+            console.log(row); // Output each row on a new line
+        }
+    </script>
+</body>
+</html>
+ -->

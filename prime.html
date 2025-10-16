@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="prime">prime numbers one to thirty:</p>
+   <script>
+var i;
+var divisor;
+for(i=2;i<=30;i++){
+    for (divisor=2;divisor<i;divisor++){
+        if(i%divisor==0){
+            break;
+        }
+       
+        }
+        if(divisor==i){
+            document.getElementById("prime").innerHTML+= " "+i;
+    }
+}
+   </script> 
+</body>
+</html>

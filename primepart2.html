@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="prime">the following are prime numbers:</p>
+    <script >
+     n=prompt("at what point you want to know prime numbers?");
+     var i;
+     var divisor;
+
+     for(i=2;i<=n;i++){
+        for(divisor=2;divisor<i;divisor++){
+            if(i%divisor==0){
+                break;
+            }
+        }
+        if(divisor==i){
+            document.getElementById("prime").innerHTML+= " " +i;
+        }
+     }
+    </script>
+</body>
+</html>
