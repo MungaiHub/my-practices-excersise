@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findLargest(num1, num2, num3) {
+    if (num1 > num2 && num1 > num3) {
+        return num1;
+    } else if (num2 >num1 && num2 > num3) {
+        return num2; 
+    } else {
+        return num3; 
+    }
+}
+
+// Get user input via prompt (in a browser environment)
+let firstNumber = Number(prompt("Enter first number:"));
+let secondNumber = Number(prompt("Enter second number:"));
+let thirdNumber = Number(prompt("Enter third number:"));
+
+// Call the function and display the result
+let largest = findLargest(firstNumber, secondNumber, thirdNumber);
+document.write("The largest number is: " + largest);
+
+    </script>
+</body>
+</html>
