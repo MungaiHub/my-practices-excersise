@@ -1,0 +1,11 @@
+#countlabel{
+    display: block;
+    text-align: center;
+    font-size: 50px;
+
+}
+#buttoncontainer{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
