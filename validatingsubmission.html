@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script>
+        function validate() {
+            // Get the values from the form fields
+            var email = document.getElementById("email").value;
+            var name = document.getElementById("name").value;
+
+            // Validate email for "@" symbol
+            if (email.indexOf("@") === -1) {
+                alert("Not a valid e-mail");
+                return false; // Prevent form submission
+            }
+
+            // Validate name length
+            if (name.length > 16) {
+                alert("Name should not be more than 16 letters");
+                return false; // Prevent form submission
+            }
+
+            // If all validations pass, allow form submission
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+<form onsubmit="return validate()">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" required><br><br>
+
+    <input type="submit" value="Register">
+</form>
+
+</body>
+</html>
