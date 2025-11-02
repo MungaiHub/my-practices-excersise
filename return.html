@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label id="result">the area is:</label>
+    <script>
+        let area;
+        let width;
+        let height;
+
+        width=window.prompt("enter width");
+        height=window.prompt("enter height");
+
+        area=getarea(width, height);
+        document.getElementById("result").innerHTML+= area;
+        function getarea(width, height){
+            let result=width*height;
+            return result;
+        }
+    </script>
+</body>
+</html>
+
+<!-- //another way to write this called -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label id="result">the area is:</label>
+    <script>
+        let width;
+        let height;
+
+        width = window.prompt("enter width");
+        height = window.prompt("enter height");
+
+        getarea(width, height); 
+
+        function getarea(width, height) {
+            let result = width * height; 
+            document.getElementById("result").innerHTML += result; 
+        }
+    </script>
+</body>
+</html>
+ -->
