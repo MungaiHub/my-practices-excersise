@@ -1,27 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Area of Triangle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body bgcolor="yellow">
-    <h2>Triangle Area Calculation</h2>
-
-    <button onclick="calculateArea()">Calculate Area</button>
-
-    <p id="result">area  calc</p> 
-
+<body>
     <script>
-      
-        function calculateArea() {
-            var base = 400;
-            var height = 100;
-
-
-            var area = (base * height) / 2;
-
-
-            document.getElementById("result").innerHTML = "The area of the triangle is " + area;
-        }
+        let base=window.prompt("enter base");
+        let height=window.prompt("enter height");
+        let result=1/2*height*base;
+        document.write("your area is:" +result);
     </script>
 </body>
 </html>
