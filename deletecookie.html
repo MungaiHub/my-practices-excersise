@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Cookie</title>
+</head>
+<body>
+    <h1>Delete a Cookie</h1>
+    <button onclick="testDeleteCookie()">Delete Username Cookie</button> 
+
+    <script>
+       
+        function deleteCookie(name) {
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/"; 
+            alert(`Cookie "${name}" has been deleted.`); 
+        }
+
+      
+        function testDeleteCookie() {
+            deleteCookie("username"); 
+            const username = getCookie("username"); 
+            alert(`After deletion, cookie is: ${username ? username : "Cookie not found"}`); 
+        }
+
+     
+        function getCookie(name) {
+            const nameEQ = name + "="; 
+            const ca = document.cookie.split(';'); 
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i]; 
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length); 
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length); 
+            }
+            return null; 
+        }
+    </script>
+</body>
+</html>
