@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Cookie</title>
+</head>
+<body>
+    <h1>Get a Cookie</h1>
+    <button onclick="testGetCookie()">Get Username Cookie</button> 
+
+    <script>
+      
+        function getCookie(name) {
+            const nameEQ = name + "="; 
+            const ca = document.cookie.split(';'); 
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i]; 
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length); 
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length); 
+            }
+            return null; 
+        }
+
+    
+        function testGetCookie() {
+            const username = getCookie("username"); 
+            alert(`Retrieved cookie: ${username ? username : "Cookie not found"}`); 
+        }
+    </script>
+</body>
+</html>
