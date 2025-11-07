@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result">result</p>
+   <script>
+    function sumOfArray(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum = sum + numbers[i];
+    }
+    return sum;
+}
+
+function getUserInputAndCalculateSum() {
+    let userInput = prompt("Enter numbers separated by commas (e.g., 10,20,30):");
+    let myArray = userInput.split(',').map(Number);
+    let result = sumOfArray(myArray);
+    document.getElementById("result").innerHTML="Sum of array elements is:"+ result+'array is'+ '['+myArray +']';
+}
+
+getUserInputAndCalculateSum();
+
+   </script> 
+</body>
+</html>
