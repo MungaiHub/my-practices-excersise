@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Odd Numbers</title>
+</head>
+<body>
+    <p id="result">Result</p>
+    <script>
+        function sumOfOddNumbers(numbersArray) {
+            let sum = 0;
+            for (let i = 0; i < numbersArray.length; i++) {
+                if (numbersArray[i] % 2 !== 0) { 
+                    sum = sum + numbersArray[i]; 
+                }
+            }
+            return sum;
+        }
+
+        function getUserInputAndCalculateSum() {
+            let userInput = prompt("Enter numbers separated by commas (e.g., 10,20,30):");
+            let numberArray = userInput.split(',').map(Number);
+            let result = sumOfOddNumbers(numberArray);
+            document.getElementById("result").innerHTML = "Sum of odd numbers is: " + result;
+        }
+
+        getUserInputAndCalculateSum();
+    </script>
+</body>
+</html>
