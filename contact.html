@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profession portofolio</title>
+    <style>
+        h1 {
+            color: limegreen;
+            text-align: center;
+            font-size: 110%;
+        }
+        h2{
+            color: black;
+            text-align: center;
+            font-size: 205%;
+
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 16px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: limegreen;
+        }
+        .input-group input::placeholder,
+        .input-group textarea::placeholder {
+            color: #999;
+        }
+        .icon-group {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+        }
+        .icon-group i {
+            margin-right: 8px;
+            color: limegreen;
+        }
+        button {
+            background-color: limegreen;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        button i {
+            margin-right: 8px;
+        }
+        #map {
+            height: 300px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        function initMap() {
+            const murangaLocation = { lat: -0.7157, lng: 37.1500 }; // Replace with the coordinates of Murang'a
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: murangaLocation,
+            });
+            const marker = new google.maps.Marker({
+                position: murangaLocation,
+                map: map,
+                title: "Murang'a",
+            });
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>Have question?</h1>
+    <h2>Contact Me Now</h2>
+   
+    <form>
+        <div class="input-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="input-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="input-group">
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+        </div>
+
+        <div class="input-group">
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+        </div>
+
+        <div id="map"></div>
+
+        <button type="submit">
+            <i class="fas fa-paper-plane"></i> Submit Form
+        </button>
+    </form>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
+</body>
+</html>
