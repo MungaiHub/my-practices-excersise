@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Interface</title>
+    <style>
+        /* Add your custom styles here */
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Buttons for Add, Update, Delete, Clear -->
+    <button class="icon-btn" onclick="addRecord()">
+        ➕ Add
+    </button>
+
+    <button class="icon-btn" onclick="updateRecord()">
+        🔄 Update
+    </button>
+
+    <button class="icon-btn" onclick="deleteRecord()">
+        🗑️ Delete
+    </button>
+
+    <button class="icon-btn" onclick="clearFields()">
+        🔄 Clear
+    </button>
+
+    <!-- Placeholder for displaying feedback or other information -->
+    <div id="feedback"></div>
+
+    <!-- Add your input fields here -->
+    <label for="regNo">Reg No:</label>
+    <input type="text" id="regNo" name="regNo">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+
+    <label for="contactNo">Contact No:</label>
+    <input type="text" id="contactNo" name="contactNo">
+
+    <label for="dob">D.O.B:</label>
+    <input type="date" id="dob" name="dob">
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+
+    <script>
+        // JavaScript functions for CRUD operations
+        function addRecord() {
+            // Add your logic for adding a record
+            document.getElementById("feedback").innerHTML = "Record added!";
+            clearFields();
+        }
+
+        function updateRecord() {
+            // Add your logic for updating a record
+            document.getElementById("feedback").innerHTML = "Record updated!";
+            clearFields();
+        }
+
+        function deleteRecord() {
+            // Add your logic for deleting a record
+            document.getElementById("feedback").innerHTML = "Record deleted!";
+            clearFields();
+        }
+
+        function clearFields() {
+            // Add your logic for clearing form fields
+            document.getElementById("regNo").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("gender").value = "";
+            document.getElementById("contactNo").value = "";
+            document.getElementById("dob").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("feedback").innerHTML = "";
+        }
+    </script>
+
+</body>
+</html>
