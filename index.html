@@ -1,36 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kicks Hub – Online Sneaker Store</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: hwb(0 98% 2%); color: #333; overflow-x: hidden; }
+
+    nav {
+      width: 100%;
+      background: hsl(96, 49%, 36%);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav ul li a { color: #fff; text-decoration: none; font-size: 1rem; }
+    nav ul li a:hover { color: hwb(202 1% 0%); }
+
+    .search-bar {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    .search-bar input {
+      width: 60%;
+      padding: 0.7rem 1rem;
+      border-radius: 25px;
+      border: 2px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .featured-wrapper { display: flex; justify-content: center; align-items: center; padding: 2rem; }
+    .featured { position: relative; width: 70%; height: 55vh; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px #c9cacf; }
+    .featured img { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; border-radius: 20px; }
+    .featured img.active { opacity: 1; }
+    .featured h2 { position: absolute; top: 10px; left: 10px; color: #fff; background: rgba(0,0,0,0.5); padding: 6px 12px; border-radius: 10px; z-index: 5; }
+
+    .categories { padding: 3rem 2rem; max-width: 1200px; margin: auto; }
+    .category { margin-bottom: 3rem; }
+    .category h2 { font-size: 1.6rem; margin-bottom: 1.2rem; border-left: 5px solid #111; padding-left: 10px; text-transform: uppercase; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .product { background: #d5d7db; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 1rem; text-align: center; transition: transform 0.3s ease; }
+    .product:hover { transform: translateY(-6px); }
+    .product img { width: 100%; aspect-ratio: 1/1; object-fit: contain; border-radius: 10px; background: #f4f4f4; }
+    .product p { margin-top: 0.8rem; font-weight: 500; }
+    .product button { background: rgb(253,144,1); color: #fff; border: none; padding: 0.6rem 1.2rem; border-radius: 25px; cursor: pointer; margin-top: 0.6rem; }
+
+    footer { background:#111; color:#fff; padding:1.5rem; text-align:center; }
+    .social-icons { margin-top: 1rem; display: flex; justify-content: center; gap: 1.2rem; }
+    .social-icons a { color: #fff; font-size: 1.4rem; text-decoration: none; }
+    .social-icons a:hover { color: #1ba021; }
+    .view-more {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.4rem;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+
+  
+}
+
+.view-more {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.4rem;
+  background: #008cff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.view-more:hover {
+  background: #1ba021;}
+
+  </style>
 </head>
 <body>
-    <label id="alabel">side A:</label> <br>
-    <input type="text" id="atextbox"><br>
-    <label id="blabel">side B</label> <br>
-    <input type="text" id="btextbox"><br>
-    <button type="button" id="submitbutton">submit</button><br>
-    <label id="clabel"></label> <br>
 
-    <script >
-        document.getElementById("submitbutton").onclick = calculate;
+  <nav>
+    <div class="logo">KICKS HUB</div>
+    <ul>
+      <li><a href="#featured">Featured</a></li>
+      <li><a href="casual/">Casual Sneakers</a></li>
+      <li><a href="official/">Official Shoes</a></li>
+    </ul>
+  </nav>
 
-function calculate() {
-    let a = document.getElementById("atextbox").value;
-    a = Number(a);
+ 
+  <div class="search-bar">
+    <input type="text" placeholder="Search for sneakers..." />
+  </div>
 
-    let b = document.getElementById("btextbox").value;
-    b = Number(b);
+ 
+  <div class="featured-wrapper" id="featured">
+    <section class="featured">
+      <h2>New in Market</h2>
+      <img src="official/IMG-20240309-WA0002.jpg" class="active">
+      <img src="official/IMG-20240309-WA0003.jpg">
+      <img src="official/IMG-20240309-WA0005.jpg">
+    </section>
+  </div>
 
-    c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+  
+  <section class="categories">
 
-    document.getElementById("clabel").innerHTML = "side C " +c;
+    
+    <div class="category" id="casual">
+      <h2>Casual Sneakers</h2>
+      <div class="grid">
+        <div class="product">
+          <img src="official/IMG-20240309-WA0013.jpg">
+          <p>Bape star</p>
+          <button onclick="thankUser()">Add to Cart</button>
+        </div>
+       
+        <div class="product">
+          <img src="official/IMG-20240309-WA0002.jpg">
+          <p>Bape star black</p>
+          <button onclick="thankUser()">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="official/IMG-20240309-WA0005.jpg">
+          <p>Air pro</p>
+          <button onclick="thankUser()">Add to Cart</button>
+        </div>
+      </div>
+       <a href="official/official.html" class="view-more">view more </a>
+    </div>
+
+    
+    <div class="category" id="official">
+      <h2>Official Shoes</h2>
+      <div class="grid">
+        <div class="product">
+          <img src="official/IMG-20240309-WA0014.jpg">
+          <p>Nike Airforce Custom</p>
+          <button onclick="thankUser()">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+          <img src="official/IMG-20240309-WA0008.jpg">
+          <p>Airforce Grey</p>
+          <button onclick="thankUser()">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="official/IMG-20240309-WA0012.jpg">
+          <p>Jordan 9 Blue</p>
+          <button onclick="thankUser()">Add to Cart</button>
+        </div>
+      </div>
+      <a href="official/official.html" class="view-more">view more </a>
+    </div>
+
+  </section>
 
 
+  <footer>
+    <p>&copy; 2025 Kicks Hub. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#">&#xf082;</a>
+      <a href="#">&#xf081;</a>
+      <a href="#">&#xf16d;</a>
+    </div>
+  </footer>
 
-   
-}
-    </script>
+  <script>
+    const slides = document.querySelectorAll('.featured img');
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
+
+    function thankUser() {
+      alert('Thank you for shopping with us!');
+    }
+  </script>
+
 </body>
 </html>
+

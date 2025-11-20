@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label id="alabel">side A:</label> <br>
+    <input type="text" id="atextbox"><br>
+    <label id="blabel">side B</label> <br>
+    <input type="text" id="btextbox"><br>
+    <button type="button" id="submitbutton">submit</button><br>
+    <label id="clabel"></label> <br>
+
+    <script >
+        document.getElementById("submitbutton").onclick = calculate;
+
+function calculate() {
+    let a = document.getElementById("atextbox").value;
+    a = Number(a);
+
+    let b = document.getElementById("btextbox").value;
+    b = Number(b);
+
+    c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+    document.getElementById("clabel").innerHTML = "side C " +c;
+
+
+
+   
+}
+    </script>
+</body>
+</html>
