@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Shoes - Kicks Hub</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Poppins', sans-serif; background:hwb(0 98% 2%); color:#333; }
+    nav { width:100%; background:#111; color:#fff; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+    nav .logo { font-size:1.5rem; font-weight:bold; }
+    nav ul { display:flex; gap:1.5rem; list-style:none; }
+    nav ul li a { color:#fff; text-decoration:none; }
+    nav ul li a:hover { color:#1ba021; }
+    .categories { padding:2rem; max-width:1200px; margin:auto; }
+    .category h2 { font-size:1.6rem; margin-bottom:1.2rem; border-left:5px solid #111; padding-left:10px; text-transform:uppercase; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; }
+    .product { background:#d5d7db; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:1rem; text-align:center; transition:transform 0.3s ease; }
+    .product:hover { transform:translateY(-6px); }
+    .product img { width:100%; aspect-ratio:1/1; object-fit:contain; border-radius:10px; background:#f4f4f4; }
+    .product p { margin-top:0.8rem; font-weight:500; }
+    .product button { background:rgb(253,144,1); color:#fff; border:none; padding:0.6rem 1.2rem; border-radius:25px; cursor:pointer; margin-top:0.6rem; }
+    footer { background:#111; color:#fff; padding:1.5rem; text-align:center; }
+    .social-icons { margin-top:1rem; display:flex; justify-content:center; gap:1.2rem; }
+    .social-icons a { color:#fff; font-size:1.4rem; text-decoration:none; }
+    .social-icons a:hover { color:#1ba021; }
+  </style>
+</head>
+<body>  <nav>
+    <div class="logo">KICKS HUB</div>
+    <ul>
+      <li><a href="../">Home</a></li>
+      <li><a href="../">Back</a></li>
+    </ul>
+  </nav>  <section class="categories">
+    <div class="category">
+      <h2>Official Shoes</h2>
+      <div class="grid" id="product-grid">
+        <!-- Products will be loaded here by JavaScript -->
+      </div>
+    </div>
+  </section>  <footer>
+    <p>&copy; 2025 Kicks Hub. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#">&#xf082;</a>
+      <a href="#">&#xf081;</a>
+      <a href="#">&#xf16d;</a>
+    </div>
+  </footer>  <script>
+    function thankUser() {
+      alert('Thank you for shopping with us!');
+    }
+
+    const productGrid = document.getElementById('product-grid');
+
+    // Replace this array with your product image filenames in the official folder
+    const productImages = [
+      'IMG-20240309-WA0002.jpg',
+'IMG-20240309-WA0003.jpg',
+'IMG-20240309-WA0005.jpg',
+'IMG-20240309-WA0006.jpg',
+'IMG-20240309-WA0007.jpg',
+'IMG-20240309-WA0008.jpg',
+'IMG-20240309-WA0009.jpg',
+'IMG-20240309-WA0010.jpg',
+'IMG-20240309-WA0011.jpg',
+'IMG-20240309-WA0012.jpg',
+'IMG-20240309-WA0013.jpg',
+'IMG-20240309-WA0014.jpg',
+'IMG-20240309-WA0015.jpg',
+'IMG-20240309-WA0016.jpg'
+      
+    ];
+
+    productImages.forEach(img => {
+      const div = document.createElement('div');
+      div.className = 'product';
+      div.innerHTML = `
+        <img src="${img}" alt="Official Shoe">
+        <p>Official Shoe</p>
+        <button onclick="thankUser()">Add to Cart</button>
+      `;
+      productGrid.appendChild(div);
+    });
+  </script></body>
+</html>
